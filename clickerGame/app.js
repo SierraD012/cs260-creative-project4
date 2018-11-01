@@ -11,9 +11,6 @@ const favicon = require('express-favicon');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var app = express();
-//var app = window.angular.module('app', []); //this line doesn't work in this file
-//app.controller('mainCtrl', mainCtrl) //neither does this line
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,6 +25,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+//var app = window.angular.module('app', []); //this line doesn't work in this file
+//app.controller('clickerCtrl', clickerCtrl); //neither does this line
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -46,24 +46,6 @@ app.use(function(err, req, res, next) {
 });
 
 
-
-
- 
-// MAIN CONTROLLER ///////////////////////////////
-//so you name/label the controller/factories in the app.js inside public/javascripts,
-// but you declare/assign them in this app.js? weird
-
-function mainCtrl ($scope) {
-
-  console.log(">MAINCTRL called");
-  
-  $scope.redClicks = 0;
-  $scope.blueClicks = 0;
-  $scope.yellowClicks = 0;
-
-}
-
-
-
+// The controller/functions etc are in the inner app.js file (public/javascripts/app.js) cuz that's the only way I could get it to work 
 
 module.exports = app;

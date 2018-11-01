@@ -1,9 +1,12 @@
+/* This is all placeholder, feel free to change */
+
 body {
   background-color: #4286f4;
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 35px;
   font-weight: bold;
+  text-align: center;
   color: #ffffff;
 }

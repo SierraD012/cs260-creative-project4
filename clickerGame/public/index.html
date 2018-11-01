@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
-  <script src="javascripts/app.js"></script>
+  <script src="javascripts/app.js"></script> <!-- If this is listed as the main script source, why does it rely so heavily on the outer app.js?? -->
   <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 
   
@@ -11,9 +11,20 @@
 </head>
 <body>
 
-  <div id='app' ng-app='app' ng-controller='mainCtrl'>
-
-    <p>HEYYYYY</p>
+  <!-- This is just placeholder, you can totally move/change all of this around -->
+  <h1>Ultimate Clicker Battle</h1>
+  <p style="text-align:center">Click on an image to add a point to the team</p>
+  <hr>
+  
+  <div id='appDivMain' ng-app='clickerApp' ng-controller='clickerCtrl'>
+    
+    <!-- Let's give these a nice border/shadow etc, maybe even make it change color for a second to indicate when clicked -->
+    <!-- Just don't change the ng-click function call please :) -->
+    <img src="https://jackaloupe.files.wordpress.com/2016/07/team-valor-cutout1.png" width="200px" style="background-color:white;" ng-click="addPoint('red')" >
+    <img src="https://jackaloupe.files.wordpress.com/2016/07/team-mystic-cutout1.png" width="200px" style="background-color:white;" ng-click="addPoint('blue')">
+    <img src="https://jackaloupe.files.wordpress.com/2016/07/team-instinct-cutout.png" width="214px" style="background-color:white;" ng-click="addPoint('yellow')">
+    
+    
   </div>
 
 </body>
