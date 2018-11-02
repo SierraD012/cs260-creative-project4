@@ -31,6 +31,10 @@ function clickerCtrl($scope, $http) {
     
     console.log("\t> Team Clicks: R="+$scope.redClicks + ", B=" + $scope.blueClicks + ", Y=" + $scope.yellowClicks);
   };
+<<<<<<< HEAD
+}
+=======
   
 }
 
+>>>>>>> 203c80bb003f00cab5fbf5d2603169660349f1dd
