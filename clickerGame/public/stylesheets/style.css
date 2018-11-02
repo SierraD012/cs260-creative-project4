@@ -3,7 +3,10 @@
 body {
   background-color: #4286f4;
 }
-
+a {
+   pointer-events: none;
+ cursor: default;
+}
 .mainHeader {
   font-family: 'Sigmar One', cursive;
   font-size: 50px;

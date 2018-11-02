@@ -18,13 +18,13 @@
 <body id ="mainBody">
 
   <!-- This is just placeholder, you can totally move/change all of this around -->
-  <h1 class='mainHeader'>ULTIMATE CLICK BATTLE</h1>
+  <h1 class='mainHeader'><a ng-click="secretTunnels('red')" class="mainHeader">U</a>LTIMATE CLICK BATTLE</h1>
   
   <div style="text-align: center">
     <img src="images/fire.png" class='headerImage'>
   </div>
   
-  <h2 class='subHeader'>Click on a team to give them a point!</h2>
+  <h2 class='subHeader'>Click on a team <a ng-click="secretTunnels('blue')" class='subHeader'>t</a>o give them a point!</h2>
   <hr>
   
   <div id='appDivMain' ng-app='clickerApp' ng-controller='clickerCtrl'>
@@ -41,7 +41,7 @@
         </div>
         <div class="col-sm-4">
           <img src="https://jackaloupe.files.wordpress.com/2016/07/team-instinct-cutout.png" class='teamImage' ng-click="addPoint('yellow')" alt="Yellow Team">
-          <p class='pointCount' id='yellowPts' ng-model='yellowPoints'>TeamYellowPts</p>   
+          <p class='pointCount' id='yellowPts' ng-model='yellowPoints'>TeamYell<a ng-click="secretTunnels('yellow')" class='pointCount'>o</a>wPts</p>   
         </div>
       </div>
     </div>
