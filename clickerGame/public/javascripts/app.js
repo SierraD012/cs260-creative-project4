@@ -7,9 +7,9 @@ app.controller('clickerCtrl', clickerCtrl);
 function clickerCtrl($scope, $http) {
     console.log(">NG:CLICKERCTRL called");
 
-    $scope.redPts = 0;
-    $scope.bluePts = 0;
-    $scope.yellowPts = 0;
+    $scope.redPoints = 0;
+    $scope.bluePoints = 0;
+    $scope.yellowPoints = 0;
 
     $scope.addPoint = function(teamColor) {
         
@@ -20,9 +20,9 @@ function clickerCtrl($scope, $http) {
         }).then(function(httpResponse) {
             console.log('response:', httpResponse);
         
-            $scope.redPts = httpResponse.red;
-            $scope.bluePts = httpResponse.blue;
-            $scope.yellowPts = httpResponse.yellow;
+            $scope.redPoints = httpResponse.red;
+            $scope.bluePoints = httpResponse.blue;
+            $scope.yellowPoints = httpResponse.yellow;
   
             //change the bg color here 
             var winningPts = Math.max($scope.redPts, $scope.bluePts, $scope.yellowPts);
