@@ -12,11 +12,12 @@ function clickerCtrl($scope, $http) {
     $scope.yellowPoints = 0;
 
     $scope.addPoint = function(teamColor) {
+        var toSend = {color:teamColor}
         
         $http({
-            url: 'http://54.236.42.112:8080/update',
+            url: 'http://54.236.42.112:4200/update',
             method: 'POST',
-            data: teamColor
+            data: toSend
         }).then(function(httpResponse) {
             console.log('response:', httpResponse);
         
@@ -42,4 +43,9 @@ function clickerCtrl($scope, $http) {
         console.log("\t AddPoint() called, teamClr= " + teamColor);
         console.log("\t> Team Clicks: R=" + $scope.redClicks + ", B=" + $scope.blueClicks + ", Y=" + $scope.yellowClicks);
     };
+}
+
+function myFunc(){
+    var toSend;
+    toSend.color
 }
