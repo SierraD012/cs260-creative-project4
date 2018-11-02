@@ -19,22 +19,22 @@ function clickerCtrl($scope, $http) {
             data: teamColor
         }).then(function(httpResponse) {
             console.log('response:', httpResponse);
-            
-                $scope.redPts = httpResponse.red;
-                $scope.bluePts = httpResponse.blue;
-                $scope.yellowPts = httpResponse.yellow;
+        
+            $scope.redPts = httpResponse.red;
+            $scope.bluePts = httpResponse.blue;
+            $scope.yellowPts = httpResponse.yellow;
   
             //change the bg color here 
             var winningPts = Math.max($scope.redPts, $scope.bluePts, $scope.yellowPts);
             if (winningPts == $scope.redPts){
               //change bg to red
-              $("mainBody").css("background-color").innerHTML("#7c0000");
+              $("#mainBody").css("background-color", "#7c0000");
             } else if (winningPts == $scope.bluePts) {
               //change bg to blue
-              $("mainBody").css("background-color").innerHTML("#003b9b");
+              $("#mainBody").css("background-color", "#003b9b");
             } else {
               //change bg to yellow
-              $("mainBody").css("background-color").innerHTML("#917d00");
+              $("#mainBody").css("background-color", "#917d00");
             }
             
         });
