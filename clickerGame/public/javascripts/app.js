@@ -12,7 +12,8 @@ function clickerCtrl($scope, $http) {
     $scope.yellowPoints = 0;
 
     $scope.addPoint = function(teamColor) {
-        var toSend = {color:teamColor}
+        console.log("\t AddPoint() called, teamClr= " + teamColor);
+        var toSend = {color:teamColor};
         
         $http({
             url: 'http://54.236.42.112:4200/update',
@@ -24,8 +25,13 @@ function clickerCtrl($scope, $http) {
             $scope.redPoints = httpResponse.red;
             $scope.bluePoints = httpResponse.blue;
             $scope.yellowPoints = httpResponse.yellow;
+            
+            //update text fields
+            $("#redPts").text($scope.redPoints);
+            $("#bluePts").text($scope.bluePoints);
+            $("#yellowPts").text($scope.yellowPoints);
   
-            //change the bg color here 
+            //change BG color to match current winning team 
             var winningPts = Math.max($scope.redPts, $scope.bluePts, $scope.yellowPts);
             if (winningPts == $scope.redPts){
               //change bg to red
@@ -38,10 +44,8 @@ function clickerCtrl($scope, $http) {
               $("#mainBody").css("background-color", "#917d00");
             }
             
+            console.log("\t>AddPoint(): done, scores: R=" + $scope.redClicks + ", B=" + $scope.blueClicks + ", Y=" + $scope.yellowClicks);
         });
-
-        console.log("\t AddPoint() called, teamClr= " + teamColor);
-        console.log("\t> Team Clicks: R=" + $scope.redClicks + ", B=" + $scope.blueClicks + ", Y=" + $scope.yellowClicks);
     };
 }
 
