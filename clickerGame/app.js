@@ -45,6 +45,27 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+var teamData;
+
+app.post('/update', function(req, res, next) {
+  var teamColor = req.body;
+  
+  console.log("Posting: " + teamColor);
+
+  switch (teamColor) {
+    case ('red'):
+      teamData.red++;
+      break;
+    case ('blue'):
+      teamData.blue++;
+      break;
+    case ('yellow'):
+      teamData.yellow++;
+      break;
+  }
+
+  return res.send(teamData);
+});
 
 // The controller/functions etc are in the inner app.js file (public/javascripts/app.js) cuz that's the only way I could get it to work 
 
