@@ -68,7 +68,9 @@ app.post('/update', function(req, res, next) {
 
   return res.send(teamData);
 });
-
+app.listen(8080, function(){
+  console.log("Server listening on port 8080")
+})
 // The controller/functions etc are in the inner app.js file (public/javascripts/app.js) cuz that's the only way I could get it to work 
 
 module.exports = app;
