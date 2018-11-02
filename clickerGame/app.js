@@ -47,7 +47,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-var teamData;
+var teamData = {red: 0, blue: 0, yellow: 0};
 
 app.post('/update', function(req, res, next) {
   var teamColor = req.body;
