@@ -3,7 +3,13 @@
 <head>
   <meta charset="utf-8">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
-  <script src="javascripts/app.js"></script> <!-- If this is listed as the main script source, why does it rely so heavily on the outer app.js?? -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet" type='text/css'>
+  
+  <script src="javascripts/app.js"></script>
   <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 
   
@@ -12,17 +18,39 @@
 <body>
 
   <!-- This is just placeholder, you can totally move/change all of this around -->
-  <h1>Ultimate Clicker Battle</h1>
-  <p style="text-align:center">Click on an image to add a point to the team</p>
+  <h1 class='mainHeader'>ULTIMATE CLICK BATTLE</h1>
+  <h2 class='subHeader'>Click on a team to give them a point!</h2>
   <hr>
   
   <div id='appDivMain' ng-app='clickerApp' ng-controller='clickerCtrl'>
     
     <!-- Let's give these a nice border/shadow etc, maybe even make it change color for a second to indicate when clicked -->
-    <!-- Just don't change the ng-click function call please :) -->
-    <img src="https://jackaloupe.files.wordpress.com/2016/07/team-valor-cutout1.png" width="200px" style="background-color:white;" ng-click="addPoint('red')" >
-    <img src="https://jackaloupe.files.wordpress.com/2016/07/team-mystic-cutout1.png" width="200px" style="background-color:white;" ng-click="addPoint('blue')">
-    <img src="https://jackaloupe.files.wordpress.com/2016/07/team-instinct-cutout.png" width="214px" style="background-color:white;" ng-click="addPoint('yellow')">
+    <!-- Just don't change the ng-click function call please :)  -->
+    <!--<img src="https://jackaloupe.files.wordpress.com/2016/07/team-valor-cutout1.png" width="200px" style="background-color:white;" ng-click="addPoint('red')" >-->
+    <!--<img src="https://jackaloupe.files.wordpress.com/2016/07/team-mystic-cutout1.png" width="200px" style="background-color:white;" ng-click="addPoint('blue')">-->
+    <!--<img src="https://jackaloupe.files.wordpress.com/2016/07/team-instinct-cutout.png" width="214px" style="background-color:white;" ng-click="addPoint('yellow')">-->
+  
+    <div class="container text-center"> 
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="https://jackaloupe.files.wordpress.com/2016/07/team-valor-cutout1.png" width="200px" style="background-color:white;" ng-click="addPoint('red')"  alt="Red Team">
+          <p class='pointCount' id='redPoints'>TeamRedPts</p>
+        </div>
+        <div class="col-sm-4"> 
+          <img src="https://jackaloupe.files.wordpress.com/2016/07/team-mystic-cutout1.png" width="200px" style="background-color:white;" ng-click="addPoint('blue')" alt="Blue Team">
+          <p class='pointCount' id='bluePoints'>TeamBluePts</p>    
+        </div>
+        <div class="col-sm-4">
+          <img src="https://jackaloupe.files.wordpress.com/2016/07/team-instinct-cutout.png" width="200px" style="background-color:white;" ng-click="addPoint('yellow')" alt="Yellow Team">
+          <p class='pointCount' id='yellowPoints'>TeamYellowPts</p>   
+        </div>
+      </div>
+    </div>
+
+    
+    
+    
+    
     
     
   </div>
