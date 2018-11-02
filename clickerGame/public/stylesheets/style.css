@@ -28,7 +28,7 @@ body {
   width: 220px;
   height: 220px;
   background-color: white;
-  border: 10px solid #fff;  
+  border: 6px solid #ffffff;  
   /*float: left;*/
   margin: 20px;
   overflow: hidden;
@@ -36,6 +36,15 @@ body {
   -webkit-box-shadow: 5px 5px 10px #111;
           box-shadow: 5px 5px 10px #111;  
 }
+.teamImage:hover {
+   border: 6px solid #028742;
+}
+/*.teamImage:click {*/
+/*   border: 6px solid #ffffff;*/
+/*   background-color: #919191;*/
+/*}*/
+
+
 
 .headerImage {
   width: 350px;
