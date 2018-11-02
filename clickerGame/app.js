@@ -21,28 +21,26 @@ var teamData = { red: 0, blue: 0, yellow: 0 };
 
 app.post('/updateTeamData', function(req, res) {
   console.log("Incoming post for update team data...")
-  var data = "";
-  req.on('data', function(chunk) { data += chunk })
-  req.on('end', function() {
-    req.rawBody = data;
-    req.jsonBody = JSON.parse(data);
-    if(data.indexOf("red")!=-1){
-      teamData.red++
-    }
-    
-    if(data.indexOf("blue")!=-1){
-      teamData.blue++
-    }
-    if(data.indexOf("yellow")!=-1){
-      teamData.yellow++
-    }
-    console.log(teamData)
-    
-    res.end(JSON.stringify(teamData))
-  })
+  var data = req.body
+  console.log(data)
+  
+  if(data.color == "red"){
+    teamData.red++
+  }
+  
+  if(data.color == "blue"){
+    teamData.blue++
+  }
+  
+  if(data.color == "yellow"){
+    teamData.yellow++
+  }
 
+  console.log(teamData)
+  res.send(JSON.stringify(teamData))
+  res.end()
+})
 
-});
 app.listen(4200, function() {
   console.log("Server listening on port 4200")
 })
