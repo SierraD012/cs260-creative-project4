@@ -4,9 +4,27 @@ body {
   background-color: #4286f4;
 }
 
-h1 {
-  font-size: 35px;
-  font-weight: bold;
+.mainHeader {
+  font-family: 'Sigmar One', cursive;
+  font-size: 50px;
   text-align: center;
   color: #ffffff;
+}
+
+.subHeader {
+  font-family: 'Passion One', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.pointCount {
+  font-family: 'Passion One', sans-serif;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.teamImage {
+  width: 200px;
+  background-color: white;
 }
