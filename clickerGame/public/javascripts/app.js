@@ -16,7 +16,7 @@ function clickerCtrl($scope, $http) {
      
      
     $http({
-        url: 'http://http://18.222.237.194:4200/update',
+        url: 'localhost:8080/update',
         method: 'POST',
         data: teamColor
     }).then(function(httpResponse){
