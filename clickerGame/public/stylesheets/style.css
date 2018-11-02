@@ -25,6 +25,20 @@ body {
 }
 
 .teamImage {
-  width: 200px;
+  width: 220px;
+  height: 220px;
   background-color: white;
+  border: 10px solid #fff;  
+  /*float: left;*/
+  margin: 20px;
+  overflow: hidden;
+  
+  -webkit-box-shadow: 5px 5px 10px #111;
+          box-shadow: 5px 5px 10px #111;  
+}
+
+.headerImage {
+  width: 350px;
+  /*background-repeat: repeat-x;*/
+  /*float: middle;*/
 }

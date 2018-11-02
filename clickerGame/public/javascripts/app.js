@@ -2,6 +2,7 @@
 
 var app = window.angular.module('clickerApp', []);
 
+
 app.controller('clickerCtrl', clickerCtrl);
 
 
@@ -31,4 +32,5 @@ function clickerCtrl($scope) {
     
     console.log("\t> Team Clicks: R="+$scope.redClicks + ", B=" + $scope.blueClicks + ", Y=" + $scope.yellowClicks);
   };
+  
 }
