@@ -33,9 +33,9 @@ function clickerCtrl($scope, $http) {
             $scope.yellowPoints = colors.yellow
             
             //update text fields
-            $("#redPts").text($scope.redPoints);
-            $("#bluePts").text($scope.bluePoints);
-            $("#yellowPts").text($scope.yellowPoints);
+            $("#redPts").text("POINTS: " + $scope.redPoints);
+            $("#bluePts").text("POINTS: " + $scope.bluePoints);
+            $("#yellowPts").text("POINTS: " + $scope.yellowPoints);
   
             //change BG color to match current winning team 
             var winningPts = Math.max($scope.redPoints, $scope.bluePoints, $scope.yellowPoints);
