@@ -9,8 +9,9 @@ function clickerCtrl($scope, $http) {
     console.log(">NG:CLICKERCTRL called");
 
     $scope.addPoint = function(teamColor) {
+        
         $http({
-            url: 'localhost:8080/update',
+            url: 'http://54.236.42.112:8080/update',
             method: 'POST',
             data: teamColor
         }).then(function(httpResponse) {
